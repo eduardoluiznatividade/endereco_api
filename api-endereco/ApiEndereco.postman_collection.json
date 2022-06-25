@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "25256761-a0f5-4b72-84fe-0d7cb1f7996c",
+		"name": "ApiEndereco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "endereco-listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/endereco/listar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endereco-incluir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cep\": \"7891011\",\r\n    \"logradouro\": \"São José, 99\",\r\n    \"complemento\": \"2o andar\",\r\n    \"bairro\": \"Centro\",\r\n    \"localidade\": \"Rio de Janeiro\",\r\n    \"uf\": \"RJ\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/endereco/incluir",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endereco-excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/usuario/:id/excluir",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						":id",
+						"excluir"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endereco-obterPorCep",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/endereco/:cep",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						":cep"
+					],
+					"variable": [
+						{
+							"key": "cep",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
