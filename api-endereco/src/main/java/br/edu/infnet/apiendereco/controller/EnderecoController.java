@@ -32,8 +32,8 @@ public class EnderecoController {
 	}
 	
 	@DeleteMapping(value = "/{id}/excluir")
-	public void excluir(@PathVariable Integer idEndereco) {
-		enderecoService.excluir(idEndereco);
+	public void excluir(@PathVariable Integer id) {
+		enderecoService.excluir(id);
 	}
 	
 	@GetMapping(value = "/{cep}")
